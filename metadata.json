@@ -1,0 +1,8 @@
+{
+  "name": "HShopp - Sàn Thương Mại Điện Tử & Giao Nhanh",
+  "description": "HShopp - Sàn thương mại điện tử với trải nghiệm giao hàng thần tốc, ưu đãi flash sale, đặt hàng tiện lợi và quy trình xác nhận điều khoản minh bạch chuẩn mực.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

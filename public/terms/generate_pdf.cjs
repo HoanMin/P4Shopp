@@ -1,0 +1,233 @@
+const fs = require('fs');
+const path = require('path');
+
+const outDir = path.join(__dirname);
+if (!fs.existsSync(outDir)) {
+  fs.mkdirSync(outDir, { recursive: true });
+}
+
+// Generate a valid PDF with 4 pages describing HShopp Terms and Conditions
+const pdfContent = `%PDF-1.4
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R 4 0 R 5 0 R 6 0 R]
+  /Count 4
+>>
+endobj
+
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595 842]
+  /Resources <<
+    /Font <<
+      /F1 7 0 R
+    >>
+  >>
+  /Contents 8 0 R
+>>
+endobj
+
+4 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595 842]
+  /Resources <<
+    /Font <<
+      /F1 7 0 R
+    >>
+  >>
+  /Contents 9 0 R
+>>
+endobj
+
+5 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595 842]
+  /Resources <<
+    /Font <<
+      /F1 7 0 R
+    >>
+  >>
+  /Contents 10 0 R
+>>
+endobj
+
+6 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595 842]
+  /Resources <<
+    /Font <<
+      /F1 7 0 R
+    >>
+  >>
+  /Contents 11 0 R
+>>
+endobj
+
+7 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica-Bold
+>>
+endobj
+
+8 0 obj
+<<
+  /Length 450
+>>
+stream
+BT
+/F1 18 Tf
+50 780 Td
+(HSHOPP - DIEU KHOAN VA DIEU KIEN GIAO DICH SAN TMDT) Tj
+/F1 12 Tf
+0 -30 Td
+(Phien ban: v2.4 | Ngay hieu luc: 01/01/2026 | San thuong mai dien tu HShopp) Tj
+0 -40 Td
+(MUC 1: PHAM VI AP DUNG VA DINH NGHIA) Tj
+0 -20 Td
+(1.1. Dieu khoan nay ap dung cho moi giao dich mua ban tren san thuong mai dien tu HShopp.) Tj
+0 -20 Td
+(1.2. Khach hang tham gia dat hang mac nhien hieu va tuan thu cac quy dinh duoc cong bo.) Tj
+0 -40 Td
+(MUC 2: DAT HANG VA THANH TOAN AN TOAN) Tj
+0 -20 Td
+(2.1. Nguoi mua lua chon san pham va xac nhan don hang qua he thong truc tuyen.) Tj
+0 -20 Td
+(2.2. Cac hinh thuc thanh toan hop le: Vi dien tu, The ngan hang, Thanh toan khi nhan COD.) Tj
+0 -20 Td
+(2.3. San su dung co che bao ve thanh toan giu tien tam giu de bao ve quyen loi nguoi tieu dung.) Tj
+ET
+endstream
+endobj
+
+9 0 obj
+<<
+  /Length 480
+>>
+stream
+BT
+/F1 14 Tf
+50 780 Td
+(MUC 3: VAN CHUYEN VA GIAO HANG THAN TOC) Tj
+/F1 11 Tf
+0 -30 Td
+(3.1. Dich vu Giao nhanh Rocket HShopp cam ket giao hang trong 24 gio doi voi khu vuc ap dung.) Tj
+0 -20 Td
+(3.2. Nguoi mua duoc kiem tra tinh trang ngoai quan truoc khi ky nhan hang.) Tj
+0 -40 Td
+(MUC 4: CHINH SACH HOAN TIEN VA DOI TRA CHI TIET) Tj
+0 -20 Td
+(4.1. Dieu kien, ty le hoan tien, cac truong hop khong duoc hoan tien phai thong bao ro rang.) Tj
+0 -20 Td
+(4.2. Thoi han xu ly yeu cau doi tra toi da 7 ngay lam viec ke tu khi tiep nhan yeu cau.) Tj
+0 -20 Td
+(4.3. Hoan tien se duoc thuc hien theo dung chinh sach da cong bo va quy dinh phap luat.) Tj
+0 -40 Td
+(MUC 5: GIA HAN TU DONG DOI VOI GOI DICH VU DINH KY) Tj
+0 -20 Td
+(5.1. Ap dung cho cac dich vu co tinh chat dang ky subscription hoac goi hoi vien HShopp Wow.) Tj
+0 -20 Td
+(5.2. Nha ban phai cong khai ro gia, chu ky thanh toan va huong dan huy de dang.) Tj
+0 -20 Td
+(5.3. Gui thong bao truoc khi gia han it nhat 3 ngay va cho phep nguoi dung huy bo bat ky luc nao.) Tj
+ET
+endstream
+endobj
+
+10 0 obj
+<<
+  /Length 510
+>>
+stream
+BT
+/F1 14 Tf
+50 780 Td
+(MUC 6: DU LIEU CA NHAN VA MINH BACH QUANG CAO) Tj
+/F1 11 Tf
+0 -30 Td
+(6.1. Du lieu ca nhan cua ban chi su dung cho muc dich xu ly don hang va cung cap dich vu.) Tj
+0 -20 Td
+(6.2. Viec su dung du lieu cho muc dich tiep thi, quang cao la lua chon rieng, khong bat buoc.) Tj
+0 -20 Td
+(6.3. Nguoi dung co toan quyen rut lai su dong y tiep thi bat ky luc nao trong muc Cai dat.) Tj
+0 -40 Td
+(MUC 7: CO CHE GIAI QUYET TRANH CHAP VA KHIEU NAI) Tj
+0 -20 Td
+(7.1. Nha ban cung cap kenh ho tro khach hang va quy trinh khieu nai ro rang, minh bach.) Tj
+0 -20 Td
+(7.2. Dam bao quyen loi cua nguoi tieu dung va khong anh huong den quyen khoi kien phap ly.) Tj
+0 -20 Td
+(7.3. Ban quan ly san HShopp se trung gian hoa giai trong vong 48 gio lam viec.) Tj
+ET
+endstream
+endobj
+
+11 0 obj
+<<
+  /Length 420
+>>
+stream
+BT
+/F1 14 Tf
+50 780 Td
+(MUC 8: THONG TIN LIEN HE VA XAC NHAN PHAP LY) Tj
+/F1 11 Tf
+0 -30 Td
+(Cong ty Co phan Thuong mai Dien tu HShopp Viet Nam) Tj
+0 -20 Td
+(Dia chi: Toa nha HShopp Tower, Quan 1, TP. Ho Chi Minh) Tj
+0 -20 Td
+(Hotline ho tro khach hang 24/7: 1900 6868 | Email: hotro@hshopp.vn) Tj
+0 -20 Td
+(Giay phep dang ky kinh doanh san TMDT so: 0318928392 cap boi Bo Cong Thuong) Tj
+0 -50 Td
+(DA DUOC PHE DUYET VA XAC NHAN BOI BAN PHAP CHE HSHOPP) Tj
+0 -20 Td
+(Ngay ky: 01/01/2026 - Chu ky so da duoc kiem nghiem hop le) Tj
+ET
+endstream
+endobj
+
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000262 00000 n 
+0000000389 00000 n 
+0000000516 00000 n 
+0000000644 00000 n 
+0000000722 00000 n 
+0000001224 00000 n 
+0000001756 00000 n 
+0000002318 00000 n 
+trailer
+<<
+  /Size 12
+  /Root 1 0 R
+>>
+startxref
+2790
+%%EOF
+`;
+
+fs.writeFileSync(path.join(outDir, 'HShopp-Dieu-khoan.pdf'), pdfContent);
+console.log('PDF generated at ' + path.join(outDir, 'HShopp-Dieu-khoan.pdf'));
